@@ -1,10 +1,14 @@
 /*
-    INPUT : iRow : 4    iCol : 4
+    INPUT : iRow : 6    iCol : 6
 
-    OUTPUT :        *   #   #   #
-                    *   *   #   #
-                    *   *   *   #
-                    *   *   *   * 
+    OUTPUT :        *   *   *   *   *   *
+                    *   *               *
+                    *       *           *
+                    *           *       *
+                    *               *   *
+                    *   *   *   *   *   *
+                    
+
 
 */
 
@@ -23,17 +27,17 @@ class Print
             return ;
         }
 
-        for(i = 1 ; i <= iRow ; i++)
+        for(i = 1 ; i <= iRow ; i++ )
         {
             for(j = 1 ; j <= iCol ; j++)
             {
-                if (i == j || i>j )
+                if ( i == j || i == 1 || i == iRow || j == 1 || j == iCol)
                 {
                     System.out.print("*\t");
                 }
                 else
                 {
-                    System.out.print("#\t");
+                    System.out.print(" \t");
                 }
             }
             System.out.println();
@@ -41,7 +45,7 @@ class Print
     }
 }
 
-class PS26a
+class PS27d
 {
     public static void main(String A[])
     {

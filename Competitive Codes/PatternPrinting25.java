@@ -1,10 +1,10 @@
 /*
     INPUT : iRow : 4    iCol : 4
 
-    OUTPUT :        *   #   #   #
-                    *   *   #   #
-                    *   *   *   #
-                    *   *   *   * 
+    OUTPUT :        1   2   3   4   
+                    1   *   *   4   
+                    1   *   *   4   
+                    1   2   3   4
 
 */
 
@@ -27,13 +27,13 @@ class Print
         {
             for(j = 1 ; j <= iCol ; j++)
             {
-                if (i == j || i>j )
+                if (i == 1 || i == iRow || j == 1 || j == iCol )
                 {
-                    System.out.print("*\t");
+                    System.out.print(j+"\t");
                 }
                 else
                 {
-                    System.out.print("#\t");
+                    System.out.print("*\t");
                 }
             }
             System.out.println();
@@ -41,7 +41,7 @@ class Print
     }
 }
 
-class PS26a
+class PS26e
 {
     public static void main(String A[])
     {

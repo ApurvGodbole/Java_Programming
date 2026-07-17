@@ -1,10 +1,13 @@
-/*
-    INPUT : iRow : 4    iCol : 4
+/*    
+            INPUT :         iRow : 6        iCol : 6
 
-    OUTPUT :        *   #   #   #
-                    *   *   #   #
-                    *   *   *   #
-                    *   *   *   * 
+            OUTPUT :       *       *       *       *       *       *
+                           *                               *       *
+                           *                       *               *
+                           *               *                       *
+                           *       *                               *
+                           *       *       *       *       *       *          
+                           
 
 */
 
@@ -15,7 +18,7 @@ class Print
     public void Display(int iRow , int iCol)
     {
         int i = 0 , j = 0 ;
-
+        
         if ( iRow != iCol )
         {
             System.out.println("Invalid Input ");
@@ -23,17 +26,17 @@ class Print
             return ;
         }
 
-        for(i = 1 ; i <= iRow ; i++)
+        for(i = iRow ; i > 0 ; i-- )
         {
             for(j = 1 ; j <= iCol ; j++)
             {
-                if (i == j || i>j )
+                if ( i == j || i == iRow || i == 1 || j == 1 || j == iCol )
                 {
                     System.out.print("*\t");
                 }
                 else
                 {
-                    System.out.print("#\t");
+                    System.out.print(" \t");
                 }
             }
             System.out.println();
@@ -41,7 +44,7 @@ class Print
     }
 }
 
-class PS26a
+class PS28c
 {
     public static void main(String A[])
     {
